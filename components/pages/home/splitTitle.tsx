@@ -1,8 +1,6 @@
 import React, { FunctionComponent } from "react";
 import styles from "@styles/components/pages/home/splittitle.module.css";
-import { CDNImage } from "@components/cdn/image";
-import Typography from "../../UI/typography/typography";
-import { TEXT_TYPE } from "@constants/typography";
+
 
 type SplitTitleProps = {
   className?: string;
