@@ -198,19 +198,19 @@ const Navbar: FunctionComponent = () => {
                 className={styles.logo}
                 src='/visuals/starknetquestLogo.svg'
                 alt='Starknet.id Logo'
-                width={70}
-                height={70}
+                width={80}
+                height={80}
                 priority
               />
             </Link>
           </div>
           <div>
             <ul className='hidden lg:flex uppercase items-center '>
-              <Link href='/'>
-                <li className={styles.menuItem}>Quests</li>
-              </Link>
               <Link href={`/discover/defi`}>
                 <li className={styles.menuItem}>DeFi</li>
+              </Link>
+              <Link href='/'>
+                <li className={styles.menuItem}>Quests</li>
               </Link>
               {isConnected && (
                 <Link href={`/${address}`}>
@@ -272,20 +272,20 @@ const Navbar: FunctionComponent = () => {
             <div className='h-full flex flex-col'>
               <div className='py-4 my-auto text-center font-extrabold'>
                 <ul className='uppercase text-babe-blue'>
-                  <Link href='/'>
-                    <li
-                      onClick={() => setNav(false)}
-                      className={styles.menuItemSmall}
-                    >
-                      Quests
-                    </li>
-                  </Link>
                   <Link href='/discover/defi'>
                     <li
                       onClick={() => setNav(false)}
                       className={styles.menuItemSmall}
                     >
                       DeFi
+                    </li>
+                  </Link>
+                  <Link href='/'>
+                    <li
+                      onClick={() => setNav(false)}
+                      className={styles.menuItemSmall}
+                    >
+                      Quests
                     </li>
                   </Link>
                   {isConnected && (
