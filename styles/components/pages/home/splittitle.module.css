@@ -3,9 +3,9 @@
     text-align: center;
 }
 
-.splitTitleContainer > svg {
+.container > svg {
     display: inline;
-    fill: var(--secondary); 
+    fill: var(--tertiary); 
 }
 
 
