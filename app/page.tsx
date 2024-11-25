@@ -18,7 +18,7 @@ export default function Page() {
   }, [router]);
 
   const handleNavigateToQuests = useCallback(() => {
-    router.push("/discover/quests");
+    router.push("/quests");
   }, [router]);
 
   return (
