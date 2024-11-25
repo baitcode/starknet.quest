@@ -5,7 +5,7 @@
 
 .container > svg {
     display: inline;
-    fill: var(--tertiary); 
+    fill: var(--secondary); 
 }
 
 
