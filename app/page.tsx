@@ -10,7 +10,6 @@ import Card from "@components/pages/home/card";
 import CallToAction from "@components/pages/home/callToAction";
 
 
-
 export default function Page() {
   const router = useRouter();
     

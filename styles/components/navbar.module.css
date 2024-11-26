@@ -37,8 +37,7 @@
   align-items: center;
   width: 100%;
   padding-left: 8.8vw;
-  /* padding-right: 8.8vw; TODO(baitcode): replace due to scroll eating space */
-  padding-right: 8.35vw;
+  padding-right: 8.8vw; 
   height: max(6.9vh, 100px);
   transition: background-color 1s ease;
   background-color: transparent;
