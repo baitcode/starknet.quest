@@ -5,8 +5,9 @@ import { useRouter } from "next/navigation";
 import Blur from "@components/shapes/blur";
 import Typography from "@components/UI/typography/typography";
 import { TEXT_TYPE } from "@constants/typography";
-import MainHeader from "@components/pages/home/header";
+import MainHeader from "@components/pages/home/hero";
 import Card from "@components/pages/home/card";
+import CallToAction from "@components/pages/home/callToAction";
 
 
 
@@ -30,7 +31,7 @@ export default function Page() {
         
         <MainHeader />
 
-        <div className={`flex flex-row flex-wrap gap-5 items-center justify-center py-12`}>
+        <CallToAction>
           <Card title="DeFi" imgSrc="/home/defi.webp" onClick={handleNavigateToDefi}>
             <Typography type={TEXT_TYPE.BODY_MICRO} color="textGray">
               Access the top DeFi opportunities on Starknet and grow your assets effortlessly.
@@ -41,7 +42,7 @@ export default function Page() {
               Complete exciting quests, earn rewards, and deepen your knowledge of Starknet.
             </Typography>
           </Card>
-        </div>
+        </CallToAction>
         
       </div>
     </div>
