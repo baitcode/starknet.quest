@@ -5,9 +5,8 @@ import Typography from "../../UI/typography/typography";
 import { TEXT_TYPE } from "@constants/typography";
 import SplitTitle from "./splitTitle";
 
-type HeroProps = {};
 
-const Hero: FunctionComponent<HeroProps> = ({}) => (
+const Hero: FunctionComponent<{}> = ({}) => (
   <div>
       <div className="item-center justify-center pb-4">
         <SplitTitle className="leading-12 pb-2" />
