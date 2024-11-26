@@ -90,6 +90,7 @@ const Navbar: FunctionComponent = () => {
 
   // Autoconnect
   useEffect(() => {
+    return // TODO(baitcode): remove
     const connectToStarknet = async () => {
       if (
         !localStorage.getItem("SQ-connectedWallet") 
