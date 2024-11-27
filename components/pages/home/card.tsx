@@ -13,7 +13,7 @@ type CardProps = {
 
 const Card: React.FC<CardProps> = ({ children, title, imgSrc, onClick, disabled }) => {
   return (
-    <div className={styles.card} onClick={onClick} aria-disabled={disabled}>
+    <div className={styles.card} onClick={disabled ? undefined : onClick} aria-disabled={disabled}>
       <div
         style={{ backgroundImage: `url('${cdnize(imgSrc)}')` }}
         className={styles.cardImage}
