@@ -1,4 +1,3 @@
-import React, { FunctionComponent } from "react";
 import styles from "@styles/components/pages/home/card.module.css";
 import cdnize from "@utils/cdnize";
 import Typography from "@components/UI/typography/typography";

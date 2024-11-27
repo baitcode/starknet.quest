@@ -16,9 +16,20 @@ export default [...compat.extends(
     "eslint:recommended",
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:import/recommended",
+    "plugin:import/typescript"
 ), {
     languageOptions: {
         parser: tsParser,
+        parserOptions: {
+            ecmaVersion: 'latest',
+            sourceType: 'module',
+            project: './tsconfig.json',
+            ecmaFeatures: {
+                jsx: true
+            }
+        }
     },
 
     rules: {
