@@ -23,7 +23,7 @@ export default function Page() {
 
   return (
     <div className={styles.screen}>
-      <div className={`flex flex-col items-center justify-center`}>
+      <div className="flex flex-col items-center justify-center">
         <div className={styles.blur1}>
           <Blur />
         </div>

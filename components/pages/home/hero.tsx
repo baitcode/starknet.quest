@@ -6,8 +6,8 @@ import { TEXT_TYPE } from "@constants/typography";
 import SplitTitle from "./splitTitle";
 
 
-const Hero: FunctionComponent<{}> = ({}) => (
-  <div>
+const Hero: React.FC = () => (
+  <header role="banner">
       <div className="item-center justify-center pb-4">
         <SplitTitle className="leading-12 pb-2" />
 
@@ -24,7 +24,7 @@ const Hero: FunctionComponent<{}> = ({}) => (
         full potential.
       </Typography>
 
-  </div>
+  </header>
 );
 
 export default Hero;

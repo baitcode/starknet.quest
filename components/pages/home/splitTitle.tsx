@@ -4,7 +4,7 @@ import { motion } from "motion/react"
 
 
 // This is the order of words appearing
-const words = ["earn", "profit", "maximize", "gain", "grow"]
+const words = ["earn", "profit", "maximize", "gain", "grow"] 
 
 type ClipPath = { 
   path: string;       // svg path `d` attribute value. Is always valid Polygon
@@ -400,33 +400,28 @@ const SplitTitle: FunctionComponent<SplitTitleProps> = ({
     return () => {
       clearTimeout(timeout);
     }
-  })
+  }, [])
   
   return (
     
     <div className={`${styles.container} ${className || ''}`}>
       <motion.svg
+        role="img"
+        aria-label={`Animated text showing the word: ${currentWord}`}
         transition={{  
           staggerChildren: stagger
         }}
         initial={isVisible ? "visible" : "hidden"}
         animate={isVisible && !isFirstLaunch ? "hidden" : "visible"}
         
-        onAnimationComplete={() => {
-          setFirstLaunch(false);
-          if (isVisible) {
-            // If WAS visible. Then now it's invisible. Pick new word and launch fadeIn.
+        onAnimationComplete={(definition: "visible" | "hidden") => {
+          if (definition === "hidden") {
             setCurrentWordIdx((currentWordIdx + 1) % words.length);
             setVisible(false);
           } else {
-            // If WAS invisible. Wait for `interval` and start fadeOut.
-            let timeout: NodeJS.Timeout;
-            timeout = setTimeout(() => {
-              setVisible(true);
-              clearTimeout(timeout);
-            }, interval * 1000);
+            let timeout = setTimeout(() => setVisible(true), interval * 1000)
+            return () => { window.clearTimeout(timeout) };
           }
-          
         }}
         width={`${currentGeom.size[0]}`} 
         height={`${currentGeom.size[1]}`} 

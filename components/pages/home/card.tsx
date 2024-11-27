@@ -12,13 +12,7 @@ type CardProps = {
   disabled?: boolean;
 };
 
-const Card: FunctionComponent<CardProps> = ({
-  children,
-  title,
-  imgSrc,
-  onClick,
-  disabled,
-}) => {
+const Card: React.FC<CardProps> = ({ children, title, imgSrc, onClick, disabled }) => {
   return (
     <div className={styles.card} onClick={onClick} aria-disabled={disabled}>
       <div

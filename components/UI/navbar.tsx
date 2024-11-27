@@ -191,7 +191,7 @@ const Navbar: FunctionComponent = () => {
               <Image
                 className={styles.logo}
                 src='/visuals/starknetquestLogo.svg'
-                alt='Starknet.id Logo'
+                alt='Starknet Quest Logo'
                 width={80}
                 height={80}
                 priority
